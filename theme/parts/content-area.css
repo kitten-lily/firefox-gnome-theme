@@ -1,0 +1,23 @@
+/* Content */
+/* Fixes for content area */
+
+/* Remove border around content when using new sidebar/vertical tabs */
+#tabbrowser-tabbox {
+    @media (-moz-bool-pref: "sidebar.revamp") {
+        & {
+            outline: none !important;
+        }
+    }
+}
+
+#vertical-tabs
+    > #tabbrowser-tabs[orient="vertical"]
+    .tabbrowser-tab:not([hidden="true"], [pinned]):first-of-type {
+    padding-left: 2px !important;
+}
+
+#vertical-tabs
+    > #tabbrowser-tabs[orient="vertical"]
+    tab:where(:not(:first-of-type)) {
+    margin-inline-start: 0 !important;
+}

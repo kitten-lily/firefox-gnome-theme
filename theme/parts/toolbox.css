@@ -9,25 +9,28 @@
 
 /* Toolbox colors */
 #navigator-toolbox {
-	background: var(--gnome-toolbar-background) !important;
-	border-color: var(--gnome-toolbar-border-color) !important;
+    background: var(--gnome-toolbar-background) !important;
+    border-color: var(--gnome-toolbar-border-color) !important;
 }
 
-#PersonalToolbar, #toolbar-menubar, #TabsToolbar, findbar {
-	appearance: none !important;
-	border: 0 !important;
-	background: var(--gnome-toolbar-background) !important;
+#PersonalToolbar,
+#toolbar-menubar,
+#TabsToolbar,
+findbar {
+    appearance: none !important;
+    border: 0 !important;
+    background: var(--gnome-toolbar-background) !important;
 }
 findbar {
-	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
+    border-top: 1px solid var(--gnome-toolbar-border-color) !important;
 }
 #nav-bar:-moz-window-inactive,
-#PersonalToolbar:-moz-window-inactive, 
-#toolbar-menubar:-moz-window-inactive, 
-#TabsToolbar:-moz-window-inactive, 
+#PersonalToolbar:-moz-window-inactive,
+#toolbar-menubar:-moz-window-inactive,
+#TabsToolbar:-moz-window-inactive,
 findbar:-moz-window-inactive,
 .container.infobar:-moz-window-inactive {
-	transition: background .2s ease-out;
+    transition: background 0.2s ease-out;
 }
 
 #navigator-toolbox:-moz-window-inactive label,
@@ -37,134 +40,141 @@ findbar:-moz-window-inactive label,
 findbar:-moz-window-inactive description,
 #viewButton:-moz-window-inactive dropmarker,
 .container.infobar:-moz-window-inactive {
-	opacity: 0.7 !important;
+    opacity: 0.7 !important;
 }
 
-#toolbar-menubar:not([inactive=true]) {
-	margin-bottom: 0 !important;
+#toolbar-menubar:not([inactive="true"]) {
+    margin-bottom: 0 !important;
 }
 #PersonalToolbar {
-	padding: 2px !important;
-	--bookmarks-toolbar-overlapping-browser-height: auto;
+    padding: 2px !important;
+    --bookmarks-toolbar-overlapping-browser-height: auto;
 }
 
 /* Overrides: Remove border below the menu bar / above the header bar */
 #TabsToolbar:not([collapsed="true"]) + #nav-bar {
-	border-top-width: 0 !important;
+    border-top-width: 0 !important;
 }
 #navigator-toolbox::after {
-	border-bottom-width: 0 !important;
+    border-bottom-width: 0 !important;
 }
 
 /* Reorder toolbars */
 #navigator-toolbox #nav-bar {
-	order: 0;
+    order: 0;
 }
 #navigator-toolbox #PersonalToolbar {
-	order: 2;
+    order: 2;
 }
 #navigator-toolbox #titlebar {
-	order: 3;
+    order: 3;
 }
 #tab-notification-deck {
-	order: 100;
+    order: 100;
 }
 .notificationbox-stack {
-	order: 1000;
+    order: 1000;
 }
 
 #navigator-toolbox #TabsToolbar {
-	order: 100;
+    order: 100;
 }
 
 /* Overrides: Don't shift other toolbars on tab drag and drop */
 #TabsToolbar[movingtab] {
-	padding-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 #TabsToolbar[movingtab] > .tabbrowser-tabs {
-	padding-bottom: 0 !important;
-	margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 #TabsToolbar[movingtab] + #nav-bar {
-	margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 /* Content notifications */
 .notificationbox-stack notification-message {
-	border: 0 !important;
-	font-size: 1em !important;
-	padding: 0 !important;
-	border-radius: 0 !important;
-	margin: 0 !important;
+    border: 0 !important;
+    font-size: 1em !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
 }
 .notificationbox-stack notification-message[style*="margin-top"] {
-	margin-top: -48px !important;
+    margin-top: -48px !important;
 }
 .notification-content {
-	padding-block: 0 !important;
+    padding-block: 0 !important;
 }
 
 .container.infobar {
-	background: var(--gnome-toolbar-background) !important;
-	box-shadow: none !important;
-	padding: 6px !important;
-	border-radius: 0 !important;
+    background: var(--gnome-toolbar-background) !important;
+    box-shadow: none !important;
+    padding: 6px !important;
+    border-radius: 0 !important;
 }
 .container.infobar::before {
-	display: none !important;
+    display: none !important;
 }
 
 .container.infobar .icon {
-	height: 16px !important;
-	width: 16px !important;
-	margin: 8px 0 !important;
+    height: 16px !important;
+    width: 16px !important;
+    margin: 8px 0 !important;
 }
 .notificationbox-stack notification-message[type="warning"] {
-	background: #ffe900 !important;	
+    background: #ffe900 !important;
 }
 .notificationbox-stack notification-message[type="critical"] {
-	background: #d70022 !important;
+    background: #d70022 !important;
 }
 
 .notificationbox-stack[notificationside="top"] notification-message {
-	border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
+    border-bottom: 1px solid var(--gnome-toolbar-border-color) !important;
 }
 .notificationbox-stack[notificationside="bottom"] notification-message {
-	border-top: 1px solid var(--gnome-toolbar-border-color) !important;
+    border-top: 1px solid var(--gnome-toolbar-border-color) !important;
 }
 
 /* Bookmarks */
 #PlacesToolbar toolbarseparator {
-	border-top: 0 !important;
+    border-top: 0 !important;
 }
 #PlacesToolbarItems > toolbarseparator::before {
-	border-image-source: none !important;
-	border-color: var(--gnome-tabbar-tab-separator-color) !important;
+    border-image-source: none !important;
+    border-color: var(--gnome-tabbar-tab-separator-color) !important;
 }
 
 /* Text link */
 .text-link {
-	color: var(--gnome-accent) !important;
+    color: var(--gnome-accent) !important;
 }
 
 /* Selection*/
 *::-moz-selection {
-	background-color: var(--gnome-selection-bg) !important;
+    background-color: var(--gnome-selection-bg) !important;
 }
 
 /* OPTIONAL: Hide WebRTC indicator */
 @media (-moz-bool-pref: "gnomeTheme.hideWebrtcIndicator") {
-	#webrtcIndicator {
-		display: none;
-	}
+    #webrtcIndicator {
+        display: none;
+    }
 }
 
 /* OPTIONAL: Move Bookmarks toolbar under tabs */
 @media (-moz-bool-pref: "gnomeTheme.bookmarksToolbarUnderTabs") {
-	#navigator-toolbox #titlebar {
-		order: 2 !important;
-	}
-	#navigator-toolbox #PersonalToolbar {
-		order: 3 !important;
-	}
+    #navigator-toolbox #titlebar {
+        order: 2 !important;
+    }
+    #navigator-toolbox #PersonalToolbar {
+        order: 3 !important;
+    }
+}
+
+/* Disable border below toolbars if using new sidebar/vertical tabs */
+@media (-moz-bool-pref: "sidebar.revamp") {
+    #navigator-toolbox {
+        border-bottom: none !important;
+    }
 }
